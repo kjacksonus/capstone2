@@ -13,7 +13,6 @@ resource "aws_vpc" "go_green_corp_vpc" {
 resource "aws_internet_gateway" "go_green_igw" {
     vpc_id = aws_vpc.go_green_corp_vpc.id
     tags = {
-      Name = "GoGreenCorpIGW"
-    }
-
+      Name = "GoGreenCorpIGW"}
+}
 }
