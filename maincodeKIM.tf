@@ -83,4 +83,5 @@ resource "aws_route_table_association" "pub_sub_assoc_az2" {
 # resource "aws_route_table_association" "priv_sub_assoc_az1" {
 #   route_table_id = aws_route_table.gg_priv_route.id
 #   subnet_id      = aws_subnet.priv_sub_assoc_az1_subnet.id
-#}
+# }
+
