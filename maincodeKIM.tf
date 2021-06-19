@@ -59,4 +59,28 @@ resource "aws_route" "gg_pub_route" {
 # resource "aws_route" "gg_priv_route" {
 # route_table_id         = aws_route_table.gg_pvrt.id 
 # destination cidr block = "0.0.0.0/0"
+# nat_gateway_id         =   aws_nat_gateway.go_green_natgw.id
+# }
+
+# Make "gg_pub_route" PURT the main route table (not AWS auto created one for VPC)
+resource "aws_main_route_table_association" "gg_pub_route" {
+  vpc_id          = aws_vpc.go_green_corp_vpc.id
+  route_table_id  = aws_route_table.gg_pub_route.id
 }
+
+#Assoc PURT with Public Subnet(s)
+resource "aws_route_table_association" "pub_sub_assoc_az1" {
+  route_table_id = aws_route_table.gg_pub_route.id #assoc this PURT
+  subnet_id      = aws_subnet.pub_az1_subnet.id    #with this pub subnet in AZ1
+}
+
+resource "aws_route_table_association" "pub_sub_assoc_az2" {
+  route_table_id = aws_route_table.gg_pub_route.id #assoc this PURT
+  subnet_id      = aws_subnet.pub_az1_subnet.id    #with this pub subnet in AZ1 
+}
+
+# #Assoc PVRT with Private Subnet(s)
+# resource "aws_route_table_association" "priv_sub_assoc_az1" {
+#   route_table_id = aws_route_table.gg_priv_route.id
+#   subnet_id      = aws_subnet.priv_sub_assoc_az1_subnet.id
+#}
