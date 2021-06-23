@@ -1,9 +1,5 @@
 
-provider "aws" {
-  region                = "us-east-1"
-  shared_credentials_file = "/Users/nilusultanva/.aws/credentials"
-  profile                 = "default"
-}
+
 #DBAdmin
 resource "aws_iam_group_membership" "dbadmin" {
   name = "tf-testing-group-membership"

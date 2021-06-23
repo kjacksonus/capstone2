@@ -1,8 +1,3 @@
-/*provider "aws" {
-  region = "us-west-1"
-  shared_credentials_file = "/Users/nilusultanva/.aws/credentials"
-  profile = "default"
-}
 
 #Manitor
 resource "aws_iam_group_membership" "monitor" {
@@ -83,4 +78,3 @@ resource "aws_iam_account_password_policy" "syadmin_password" {
   require_symbols                = true
   allow_users_to_change_password = true
 }
-*/

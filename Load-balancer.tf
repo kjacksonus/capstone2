@@ -1,8 +1,3 @@
-/*provider "aws" {
-  region = "us-east-1"
-  shared_credentials_file = "/Users/nilusultanva/.aws/credentials"
-  profile = "default"
-}
 #Application Load Balancer
 resource "aws_lb" "test" {
   name               = "test-lb-tf"
@@ -20,4 +15,3 @@ resource "aws_lb" "test" {
     Environment = "production"
   }
 }
-*/

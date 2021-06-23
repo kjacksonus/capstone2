@@ -1,5 +1,4 @@
 
-/*
 resource "aws_route53_zone" "primary" {
   name = "www.gogreen.com"
 }
@@ -9,4 +8,3 @@ resource "aws_route53_record" "route53" {
   type    = "A"
   ttl     = "300"
 }
-*/

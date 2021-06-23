@@ -1,5 +1,5 @@
 
-/*rovider "aws" {
+rovider "aws" {
   region = "us-east-1"
 }
 #Autoscaling group
@@ -41,4 +41,3 @@ EOF
     propagate_at_launch = false
   }
 }
-*/

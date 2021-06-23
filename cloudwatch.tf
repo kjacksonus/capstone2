@@ -1,4 +1,4 @@
-/*
+
 resource "aws_cloudwatch_metric_alarm" "nlb_healthyhosts" {
   alarm_name          = "alarmname"
   comparison_operator = "LessThanThreshold"
@@ -11,7 +11,7 @@ resource "aws_cloudwatch_metric_alarm" "nlb_healthyhosts" {
   alarm_description   = "Number of healthy nodes in Target Group"
   actions_enabled     = "true"
 }
-*/
+
 
 
 

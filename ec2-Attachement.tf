@@ -1,8 +1,4 @@
 
-provider "aws" {
-  region = "us-west-1"
-
-}
 #Key_pair
 resource "aws_key_pair" "project_team" {
   key_name   = "project"

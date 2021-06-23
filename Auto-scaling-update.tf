@@ -1,7 +1,3 @@
-/*
-provider "aws" {
-  region = "us-east-1"
-}
 #Autoscaling group
 resource "aws_autoscaling_group" "bar" {
   name                      = "foobar3-terraform-test"
@@ -47,4 +43,3 @@ EOF
     propagate_at_launch = false
   }
 }
-*/

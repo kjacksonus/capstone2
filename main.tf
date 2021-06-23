@@ -1,8 +1,4 @@
-provider "aws" {
-  region = "us-east-1"
-  shared_credentials_file = "/Users/nilusultanva/.aws/credentials"
-  profile = "default"
-}
+
 # Cretae VPC
 resource "aws_vpc" "gogreen" {
   cidr_block = "10.0.0.0/16"

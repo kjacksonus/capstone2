@@ -1,7 +1,4 @@
-/*
-provider "aws" {
-  region = "us-east-1"
-}
+
 resource "aws_sns_topic" "GoGreen_SNS" {
   name = "GoGreen_SNS"
 }
@@ -62,4 +59,3 @@ data "aws_iam_policy_document" "sns_topic_policy" {
 # Passing Account_ID and Region_NAME
 data "aws_caller_identity" "current" {}
 data "aws_region" "current" {}
-*/

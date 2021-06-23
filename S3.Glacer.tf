@@ -1,9 +1,4 @@
 
-provider "aws" {
-  region     = "us-east-1"
-  shared_credentials_file = "/Users/nilusultanva/.aws/credentials"
-  profile = "default"
-}
 #S3-Bucket
 resource "aws_s3_bucket_object" "prod-folder" {
     bucket = aws_s3_bucket.gogreen-bucket.id

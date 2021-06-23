@@ -1,4 +1,4 @@
-/*
+
 provider "aws" {
   region     = "us-east-1"
   shared_credentials_file = "/Users/nilusultanva/.aws/credentials"
@@ -61,4 +61,3 @@ resource "aws_iam_account_password_policy" "syadmin_password" {
   require_symbols                = true
   allow_users_to_change_password = true
 }
-*/

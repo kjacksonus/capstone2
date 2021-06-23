@@ -1,4 +1,4 @@
-/*
+
 # S3bucket with KMS and SSEncryption
 
 resource "aws_kms_key" "kmskey" {
@@ -93,4 +93,4 @@ resource "aws_cloudfront_distribution" "distribution" {
     cloudfront_default_certificate = true
   }
 }
-*/
+
