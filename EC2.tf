@@ -1,7 +1,7 @@
-
-provider "aws" {
+/*provider "aws" {
   region = "us-west-1"
-
+  shared_credentials_file = "/Users/nilusultanva/.aws/credentials"
+  profile = "default"
 }
 
 resource "aws_key_pair" "project_team" {
@@ -92,3 +92,4 @@ resource "aws_elb_attachment" "web_tier_lb" {
 #cross_zone_load_balancing   = true
 #idle_timeout                = 400
 #connection_draining         = true
+*/

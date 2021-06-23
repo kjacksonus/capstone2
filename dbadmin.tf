@@ -1,10 +1,9 @@
-/*
+
 provider "aws" {
-  region                  = "us-east-1"
+  region                = "us-east-1"
   shared_credentials_file = "/Users/nilusultanva/.aws/credentials"
   profile                 = "default"
 }
-
 #DBAdmin
 resource "aws_iam_group_membership" "dbadmin" {
   name = "tf-testing-group-membership"
@@ -35,7 +34,6 @@ resource "aws_iam_user" "dbadmin2" {
 resource "aws_iam_access_key" "dbadmin2_access_key" {
   user = aws_iam_user.dbadmin2.name
 }
-
 resource "aws_iam_group_policy" "dbadmin_policy" {
   name   = "dbadmin"
   group  = aws_iam_group.dbadmin.id
@@ -53,7 +51,6 @@ resource "aws_iam_group_policy" "dbadmin_policy" {
 }
 EOF
 }
-
 resource "aws_iam_account_password_policy" "dbadmin_password" {
   minimum_password_length        = 8
   require_lowercase_characters   = true
@@ -62,4 +59,3 @@ resource "aws_iam_account_password_policy" "dbadmin_password" {
   require_symbols                = true
   allow_users_to_change_password = true
 }
-*/
