@@ -1,4 +1,4 @@
-
+/*
 #Internet Gateway
 resource "aws_internet_gateway" "my-gw" {
   vpc_id = aws_vpc.main.id
@@ -18,3 +18,4 @@ resource "aws_nat_gateway" "nat-gateway" {
     Name = "gw NAT"
   }
 }
+*/
